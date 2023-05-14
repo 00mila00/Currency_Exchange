@@ -36,7 +36,7 @@ export const getGoldPrices = async () => {
 
   try {
     const response = await axios.get(
-      `http://api.nbp.pl/api/cenyzlota/${startDate}/${endDate}`
+      `https://api.nbp.pl/api/cenyzlota/${startDate}/${endDate}`
     );
     return response.data;
   } catch (error) {
@@ -59,7 +59,7 @@ export const getHistoricalRates = async (currencyCode) => {
 
 export const getCurrencyByDate = async (table, code, date) => {
     try {
-      const response = await axios.get(`http://api.nbp.pl/api/exchangerates/rates/${table}/${code}/${date}`);
+      const response = await axios.get(`https://api.nbp.pl/api/exchangerates/rates/${table}/${code}/${date}`);
       return response.data;
     } catch (error) {
       throw new Error(`Failed to fetch currency for date ${date}`);
