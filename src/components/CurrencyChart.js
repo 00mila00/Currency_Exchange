@@ -105,13 +105,13 @@ class CurrencyChart extends Component {
     const { comparison, currentPrice, currentDate } = this.state;
     return (
       <div className='chartContainer' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div><h1>1 {this.props.currencyCode}: {currentPrice} PLN <span style={{fontSize: '50px',  color: comparison==='↑' ? 'green' : 'red'}}> {comparison}</span></h1></div>
+        <div style={{ height: '70px'}} ><h1>1 {this.props.currencyCode}: {currentPrice} PLN <span style={{fontSize: '50px',  color: comparison==='↑' ? 'green' : 'red'}}> {comparison}</span></h1></div>
         <p>Publication date: {currentDate}</p>
-        <div style={{ position: 'relative', width: '60vw', height: '660px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ position: 'relative', width: '55vw', height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           
           <canvas ref={this.chartRef} />
         </div>
-        <div style={{ margin: 'auto', width: '60vw' }} id="statistics-table"></div>
+        <div style={{ margin: '0 auto 40px', width: '45vw' }} id="statistics-table"></div>
       </div>
     );
   }

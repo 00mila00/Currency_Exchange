@@ -6,7 +6,7 @@ const TableContainer = styled.div`
   color: #fff;
   padding: 20px;
   width: 80%;
-  margin-top: 20px;
+
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;

@@ -5,14 +5,13 @@ import styled from 'styled-components'
 
 const DivForPrices = styled.div`
   width:50%;
-  max-height: 660px;
+  max-height: 600px;
   height: auto;
   margin: 30px 40px;
-  padding:10px 5px;
+  padding:10px 20px;
   border-radius: 20px;
  background: rgba(130, 130, 255, 0.2);
-  //background: rgba(0,0,0,0.4);
-  min-width: 500px;
+  min-width: 400px;
 `
 const Currency = styled.div`
   display:flex;
@@ -78,8 +77,8 @@ class CurrenciesList extends Component {
               <Currency
                 key={curr.code}
                 onClick={() => this.handleDivClick(curr)}
-                style={{  backgroundColor: selectedCurrency === curr ? 'rgba(130, 130, 255, 0.4)' : "rgba(90,30,200,0.3)" }}>
-                <h3>{curr.code}</h3> <p style={{fontSize:'18px'}}> {curr.mid} PLN</p>
+                style={{backgroundColor: selectedCurrency === curr ? 'rgba(130, 130, 255, 0.4)' : "rgba(90,30,200,0.3)" }}>
+                <h3 style={{fontSize: '16px'}}>{curr.code}</h3> <p style={{fontSize:'16px'}}> {curr.mid} PLN</p>
               </Currency>
             ))}
           </DivForPrices>

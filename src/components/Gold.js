@@ -96,13 +96,13 @@ class GoldChart extends Component {
 
     content = (
       <div style={{ textAlign: 'center' }}>
-        <h1>Current gold price: {currentPrice} PLN <span style={{fontSize: '50px',  color: comparison==='↑' ? 'green' : 'red'}}> {comparison}</span></h1>
-        <p style={{fontSize:'25px'}}>(per 1g with a purity of 1000)</p>
+        <div style={{height: '45px'}}><h1>Current gold price: {currentPrice} PLN <span style={{fontSize: '45px',  color: comparison==='↑' ? 'green' : 'red'}}> {comparison}</span></h1></div>
+        <p style={{fontSize:'22px'}}>(per 1g with a purity of 1000)</p>
         <p>Publication date: {currentDate}</p>
-        <div style={{ position: 'relative', margin: 'auto', width: '50vw' }}>
+        <div style={{ position: 'relative', margin: 'auto', width: '40vw' }}>
           <canvas ref={this.chartRef} />
         </div>
-        <div style={{ margin: '0 auto', width: '60vw' }} id="statistics-table"></div>
+        <div style={{ margin: '0 auto', width: '45vw' }} id="statistics-table"></div>
 </div>
 );
 return content;
